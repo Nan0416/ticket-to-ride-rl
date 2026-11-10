@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Rocky Way — device preview</title>
+    <style>
+      body {
+        margin: 0;
+        background: #222;
+        color: #ddd;
+        font: 13px system-ui;
+        display: flex;
+        gap: 24px;
+        padding: 16px;
+        align-items: flex-start;
+        overflow: auto;
+      }
+      figure {
+        margin: 0;
+      }
+      figcaption {
+        margin-bottom: 6px;
+      }
+      iframe {
+        border: 0;
+        border-radius: 18px;
+        background: #000;
+        box-shadow: 0 0 0 6px #111;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Dev aid: shows the game at phone sizes. All frames share this tab's session (same player). -->
+    <figure><figcaption>Phone portrait 390×844</figcaption><iframe src="/" width="390" height="844"></iframe></figure>
+    <figure><figcaption>Phone landscape 844×390</figcaption><iframe src="/" width="844" height="390"></iframe></figure>
+  </body>
+</html>

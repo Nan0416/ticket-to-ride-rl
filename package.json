@@ -1,0 +1,35 @@
+{
+  "name": "rocky-way",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Rocky Way - a 3D multiplayer railroad route-building game for the browser",
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c blue,green \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "tsx watch server/index.ts",
+    "dev:client": "vite",
+    "build": "vite build",
+    "start": "NODE_ENV=production tsx server/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "geo": "tsx scripts/build-geo.ts",
+    "map:stats": "tsx scripts/gen-map.ts"
+  },
+  "dependencies": {
+    "three": "^0.187.0",
+    "tsx": "^4.23.15",
+    "ws": "^8.22.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/three": "^0.187.0",
+    "@types/topojson-client": "^3.1.5",
+    "@types/ws": "^8.18.2",
+    "concurrently": "^10.0.7",
+    "topojson-client": "^3.1.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.7",
+    "vitest": "^5.1.0",
+    "world-atlas": "^2.0.2"
+  }
+}

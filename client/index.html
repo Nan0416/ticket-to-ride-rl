@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#3a2a1d" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="Rocky Way — a 3D multiplayer railroad route-building game across North America." />
+    <title>Rocky Way</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div id="stage"></div>
+    <div id="ui">
+      <div id="screen"></div>
+      <div id="hud" hidden>
+        <header id="topbar"></header>
+        <div id="players"></div>
+        <div id="banner"></div>
+        <aside id="contracts" class="panel"></aside>
+        <aside id="market" class="panel"></aside>
+        <section id="claim" class="panel" hidden></section>
+        <footer id="hand"></footer>
+        <aside id="feed" class="panel">
+          <div class="panel-title">Log &amp; chat <button class="icon-btn only-mobile close" data-act="sheet" data-sheet="">✕</button></div>
+          <div id="feed-list"></div>
+          <form id="chat-form" autocomplete="off"><input id="chat-input" maxlength="200" placeholder="Say something…" enterkeyhint="send" /></form>
+        </aside>
+      </div>
+      <div id="modal"></div>
+      <div id="toasts"></div>
+      <div id="conn"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
